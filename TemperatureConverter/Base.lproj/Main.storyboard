@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G21013" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="After Noon" translatesAutoresizingMaskIntoConstraints="NO" id="ATD-pE-o7S">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="msW-Xu-Jly">
+                                <rect key="frame" x="46" y="259.33333333333331" width="322" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="qq7-fq-hhA"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Converter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uR-jj-Y8v">
+                                <rect key="frame" x="86" y="28" width="242" height="44.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHz-79-d5r">
+                                <rect key="frame" x="158.66666666666666" y="151.33333333333334" width="97" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTR-tw-Yuo">
+                                <rect key="frame" x="162.66666666666666" y="337.33333333333331" width="89" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WTR-tw-Yuo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="38A-Ts-MsA"/>
+                            <constraint firstItem="lHz-79-d5r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FEt-a3-wIx"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="5uR-jj-Y8v" secondAttribute="trailing" constant="65.999999999999943" id="HZ5-2T-Qvd"/>
+                            <constraint firstItem="5uR-jj-Y8v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="RHj-B2-g7g"/>
+                            <constraint firstItem="msW-Xu-Jly" firstAttribute="top" secondItem="lHz-79-d5r" secondAttribute="bottom" constant="48" id="Xrk-c3-c4E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ATD-pE-o7S" secondAttribute="bottom" id="YzA-fJ-zyV"/>
+                            <constraint firstItem="lHz-79-d5r" firstAttribute="top" secondItem="5uR-jj-Y8v" secondAttribute="bottom" constant="79" id="aeG-Nj-C8e"/>
+                            <constraint firstItem="ATD-pE-o7S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b1L-VJ-zKv"/>
+                            <constraint firstItem="5uR-jj-Y8v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bV1-va-6Kf"/>
+                            <constraint firstItem="WTR-tw-Yuo" firstAttribute="top" secondItem="msW-Xu-Jly" secondAttribute="bottom" constant="48" id="d5a-Yh-LXI"/>
+                            <constraint firstItem="msW-Xu-Jly" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iEp-MQ-DCN"/>
+                            <constraint firstAttribute="trailing" secondItem="ATD-pE-o7S" secondAttribute="trailing" id="mkm-9Z-Duo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="msW-Xu-Jly" secondAttribute="trailing" constant="28" id="ssH-BD-fWa"/>
+                            <constraint firstItem="ATD-pE-o7S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yje-qD-J21"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="lHz-79-d5r" id="qT5-nR-55z"/>
+                        <outlet property="fahrenheitLabel" destination="WTR-tw-Yuo" id="rPz-hQ-WB2"/>
+                        <outlet property="slider" destination="msW-Xu-Jly" id="r0Q-2q-dQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="121.46739130434784"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="After Noon" width="125" height="222"/>
+    </resources>
+</document>
